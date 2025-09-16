@@ -86,11 +86,16 @@
     </div>
 
     <div class="choices">
-      <button class="choice-btn" onclick="window.location.replace('page-a.html')">Tetap Menunggu</button>
-      <button class="choice-btn" onclick="window.location.replace('page-b.html')">Melarikan Diri</button>
+  <button class="choice-btn" onclick="goToPage('page-a.html')">Tetap Menunggu</button>
+  <button class="choice-btn" onclick="goToPage('page-b.html')">Melarikan Diri</button>
+</div>
 
-    </div>
-  </div>
-
+<script>
+  function goToPage(url) {
+    // ini akan mengganti halaman TANPA menyimpan history,
+    // jadi pembaca nggak bisa klik "Back" untuk balik ke pilihan
+    window.location.replace(url);
+  }
+</script>
 </body>
 </html>
